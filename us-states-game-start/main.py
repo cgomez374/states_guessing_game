@@ -66,13 +66,9 @@ while is_game_on:
     if guessed_correctly == number_of_states:
         is_game_on = False
 
-# States not guessed saved to CSV
+# States not guessed saved to CSV; using list comprehension
 
-not_guessed = []
-i = 0
-for state in states_list:
-    if state not in guessed:
-        not_guessed.append(state)
+not_guessed = [state for state in states_list if state not in guessed]
 
 # Create dict
 
